@@ -1,0 +1,20 @@
+---
+description: Idempotent Next.js App Router and React function components
+globs: "**/*.{ts,tsx}"
+alwaysApply: false
+---
+
+# Next.js + React
+
+- Function components only. Server Components by default; `"use client"` only for hooks, events, or browser APIs.
+- Render must be pure: no module-level mutation, no `Date.now()`/`Math.random()` during render.
+- List keys are stable ids, not indexes when order can change.
+- GET route handlers are retry-safe and must not mutate state. Writes use POST/PUT/PATCH/DELETE and avoid duplicate creates on retry (stable ids / upsert).
+- `useEffect` must survive Strict Mode double-mount: cleanup subscriptions; ignore stale fetches.
+- Type props with a PascalCase `interface`. Put reusable state in a typed `use*` hook. Component names are PascalCase.
+- Access mock/API data through functions (`getCandidates`), not scattered JSON imports.
+
+```tsx
+// ❌ let n = 0; function View() { n += 1; return <p>{n}</p> }
+// ✅ function CandidateCount({ total }: { total: number }) { return <p>{total}</p> }
+```

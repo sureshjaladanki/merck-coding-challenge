@@ -1,0 +1,14 @@
+---
+description: Project coding standards pointer (TS, Next.js, Tailwind, FP, DRY)
+alwaysApply: true
+---
+
+# Coding standards
+
+Follow `docs/coding-standards.md`.
+
+- TypeScript strict; interfaces/types; no `any`.
+- Idempotent TS and Next.js: pure functions, immutable data, pure renders, retry-safe GET.
+- JS/TS naming: PascalCase for classes/types/interfaces/components; camelCase for values; kebab-case files.
+- FP + DRY: compose small functions; extract shared domain logic.
+- Style with Tailwind CSS. Stack is Next.js + React.

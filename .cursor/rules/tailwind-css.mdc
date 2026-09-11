@@ -1,0 +1,12 @@
+---
+description: Style UI with Tailwind CSS utilities only
+globs: "**/*.{tsx,jsx}"
+alwaysApply: false
+---
+
+# Tailwind CSS
+
+- Style with Tailwind utilities on JSX. No CSS modules, styled-components, or `style={{}}` unless a value cannot be a utility (dynamic px from data).
+- Layout with `flex`/`grid`/`gap`. Prefer theme tokens over arbitrary colors (`text-[#123]`).
+- Use `sm:`/`md:`/`lg:` for breakpoints.
+- Repeat class clusters by extracting a component (or a small `clsx`/`cva` helper), not by copying long strings.

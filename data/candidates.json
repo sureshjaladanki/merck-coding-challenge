@@ -1,0 +1,102 @@
+[
+  {
+    "id": "dc-001",
+    "name": "Merckolumab",
+    "status": "in-development",
+    "description": "A humanized monoclonal antibody being evaluated for selected solid tumors with high PD-L1 expression.",
+    "mechanismOfAction": "Binds PD-L1 and blocks interaction with PD-1, restoring T-cell mediated anti-tumor activity.",
+    "sideEffects": ["Fatigue", "Infusion-related reactions", "Rash", "Immune-related pneumonitis"],
+    "therapeuticArea": "Oncology",
+    "developmentPhase": "Phase II"
+  },
+  {
+    "id": "dc-002",
+    "name": "Sotivant",
+    "status": "approved",
+    "description": "An oral kinase inhibitor indicated for a subset of patients with MET-altered non-small cell lung cancer.",
+    "mechanismOfAction": "Selectively inhibits MET tyrosine kinase signaling that drives tumor cell proliferation and survival.",
+    "sideEffects": ["Peripheral edema", "Nausea", "Increased serum creatinine", "Dyspnea"],
+    "therapeuticArea": "Oncology",
+    "developmentPhase": "Approved"
+  },
+  {
+    "id": "dc-003",
+    "name": "Cladribine analogue MK-441",
+    "status": "in-development",
+    "description": "A next-generation nucleoside analogue designed for relapsing forms of multiple sclerosis.",
+    "mechanismOfAction": "Preferentially depletes lymphocytes through disruption of DNA synthesis in highly dividing immune cells.",
+    "sideEffects": ["Lymphopenia", "Infection risk", "Headache", "Herpes zoster"],
+    "therapeuticArea": "Neurology",
+    "developmentPhase": "Phase III"
+  },
+  {
+    "id": "dc-004",
+    "name": "Evobrutinib follow-on",
+    "status": "in-development",
+    "description": "A covalent BTK inhibitor candidate intended to improve CNS exposure in progressive MS.",
+    "mechanismOfAction": "Irreversibly inhibits Bruton's tyrosine kinase in B cells and myeloid cells involved in neuroinflammation.",
+    "sideEffects": ["Elevated liver enzymes", "Upper respiratory infection", "Diarrhea"],
+    "therapeuticArea": "Neurology",
+    "developmentPhase": "Phase I"
+  },
+  {
+    "id": "dc-005",
+    "name": "Avelumab",
+    "status": "approved",
+    "description": "A PD-L1 blocking antibody used in Merkel cell carcinoma and other selected malignancies.",
+    "mechanismOfAction": "Binds PD-L1 on tumor and immune cells, interrupting immune checkpoint signaling.",
+    "sideEffects": ["Infusion reactions", "Fatigue", "Musculoskeletal pain", "Immune-mediated colitis"],
+    "therapeuticArea": "Oncology",
+    "developmentPhase": "Approved"
+  },
+  {
+    "id": "dc-006",
+    "name": "Tepotinib XR",
+    "status": "in-development",
+    "description": "An extended-release MET inhibitor formulation aimed at once-daily dosing with a flatter exposure profile.",
+    "mechanismOfAction": "Sustained MET kinase inhibition with modified-release pharmacokinetics to reduce peak-related adverse events.",
+    "sideEffects": ["Edema", "Hypoalbuminemia", "Nausea"],
+    "therapeuticArea": "Oncology",
+    "developmentPhase": "Phase I"
+  },
+  {
+    "id": "dc-007",
+    "name": "Praziquantel micronized",
+    "status": "approved",
+    "description": "An anthelmintic used against schistosomiasis, with a micronized formulation to improve bioavailability.",
+    "mechanismOfAction": "Increases permeability of schistosome cell membranes to calcium ions, causing paralysis and death of the parasite.",
+    "sideEffects": ["Dizziness", "Abdominal pain", "Malaise", "Urticaria"],
+    "therapeuticArea": "Infectious disease",
+    "developmentPhase": "Approved"
+  },
+  {
+    "id": "dc-008",
+    "name": "Bintrafusp alfa analog",
+    "status": "in-development",
+    "description": "A bifunctional fusion protein combining TGF-β trap activity with PD-L1 blockade for checkpoint-resistant tumors.",
+    "mechanismOfAction": "Neutralizes TGF-β in the tumor microenvironment while blocking PD-L1 to restore anti-tumor immunity.",
+    "sideEffects": ["Anemia", "Keratoacanthoma", "Bleeding events", "Fatigue"],
+    "therapeuticArea": "Oncology",
+    "developmentPhase": "Phase II"
+  },
+  {
+    "id": "dc-009",
+    "name": "Sprifermin topical",
+    "status": "in-development",
+    "description": "A recombinant FGF18 candidate being studied for cartilage repair in early osteoarthritis.",
+    "mechanismOfAction": "Stimulates chondrocyte proliferation and extracellular matrix production via FGFR3 signaling.",
+    "sideEffects": ["Injection-site pain", "Arthralgia", "Transient swelling"],
+    "therapeuticArea": "Musculoskeletal",
+    "developmentPhase": "Phase II"
+  },
+  {
+    "id": "dc-010",
+    "name": "Glucophage XR companion",
+    "status": "approved",
+    "description": "An extended-release biguanide used as first-line therapy in type 2 diabetes when lifestyle measures are insufficient.",
+    "mechanismOfAction": "Decreases hepatic glucose production and improves insulin sensitivity in peripheral tissues.",
+    "sideEffects": ["Gastrointestinal upset", "Vitamin B12 deficiency", "Lactic acidosis (rare)"],
+    "therapeuticArea": "Endocrinology",
+    "developmentPhase": "Approved"
+  }
+]

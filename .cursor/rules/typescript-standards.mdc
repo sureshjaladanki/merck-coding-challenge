@@ -1,0 +1,39 @@
+---
+description: Type-safe, idempotent TypeScript with clear JS/TS names
+globs: "**/*.{ts,tsx}"
+alwaysApply: false
+---
+
+# TypeScript
+
+- Keep `strict` mode. No `any`. Prefer `unknown` + narrowing. Avoid `as` except beside a runtime check.
+- `interface` for object shapes (models, props). `type` for unions, intersections, aliases.
+- Export explicit parameter and return types. Name domain types (`DrugCandidate`), not anonymous objects.
+
+```ts
+// ❌
+function label(d: any) { return d.name }
+
+// ✅
+function getCandidateLabel(candidate: DrugCandidate): string {
+  return candidate.name.trim();
+}
+```
+
+# Naming
+
+- PascalCase for classes, types, interfaces, and React components. camelCase for values and functions. kebab-case for files (not PascalCase filenames).
+- `useX` hooks; `is`/`has`/`can` booleans; `handleX` handlers; `onX` callback props.
+- Names describe meaning. No `tmp`, `data1`, `IDrug`, `strName`.
+
+# Idempotent FP
+
+- Pure functions: same inputs → same outputs. Never mutate arguments or module state; return new values.
+- I/O stays at edges. Domain logic must be safe to re-run.
+- DRY: extract shared knowledge (filters, mappers). Do not abstract accidental JSX similarity.
+- Prefer `map`/`filter`/early returns over mutating loops.
+
+```ts
+// ❌ candidates.forEach(c => { c.status = "approved" })
+// ✅ candidates.map(c => ({ ...c, status: "approved" as const }))
+```

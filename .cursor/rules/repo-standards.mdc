@@ -1,0 +1,13 @@
+---
+description: Repo tooling — npm, Jest, Markdown docs
+alwaysApply: true
+---
+
+# Repository standards
+
+Follow `docs/repo-standards.md`.
+
+- Package manager: **npm** only (`package-lock.json`). No Yarn/pnpm/Bun.
+- Layout: `src/app`, `src/components`, `src/lib`, `src/types`, `data/` (repo root); tests in `__tests__/` (not `tests/`).
+- Unit tests: **Jest** (`*.test.ts` / `*.test.tsx`). Run with `npm test`.
+- Docs: Markdown (`.md`) in `README.md` and `docs/`.
