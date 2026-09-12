@@ -20,10 +20,12 @@ const candidatesById: ReadonlyMap<string, DrugCandidate> = new Map(
   catalog.map((candidate) => [candidate.id, candidate]),
 );
 
+/** Mock list API: list UIs call this instead of importing JSON or fetching HTTP. */
 export function getCandidates(): DrugCandidateSummary[] {
   return catalog.map(toSummary);
 }
 
+/** Mock detail API: look up one candidate by id, as a `GET /candidates/:id` would. */
 export function getCandidateById(id: string): DrugCandidate | undefined {
   const candidate = candidatesById.get(id);
   if (!candidate) {
