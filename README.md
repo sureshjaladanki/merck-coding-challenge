@@ -4,6 +4,12 @@ A Next.js + TypeScript web app for viewing, searching, and filtering drug candid
 
 The UI talks to a mock API so the same architecture can scale to larger datasets. Search filters the list by name; each candidate opens a details page.
 
+## Demo
+
+<video src="demo/demo-video.mp4" controls width="720" title="Drug Candidate Explorer demo"></video>
+
+[Watch the demo](demo/demo-video.mp4) — list, search, details, and the not-found page.
+
 ## Stack
 
 | Layer | Choice |
