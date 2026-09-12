@@ -9,6 +9,7 @@ const config: Config = {
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   testMatch: ["**/__tests__/**/*.test.ts", "**/__tests__/**/*.test.tsx"],
+  collectCoverageFrom: ["src/**/*.{ts,tsx}", "!src/types/**"],
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
   },

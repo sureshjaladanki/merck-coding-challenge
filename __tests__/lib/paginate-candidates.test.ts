@@ -27,6 +27,13 @@ describe("paginateCandidates", () => {
     expect(result.items).toEqual([]);
   });
 
+  test("uses the default page size when pageSize is omitted", () => {
+    const result = paginateCandidates(items, 1);
+
+    expect(result.pageSize).toBe(10);
+    expect(result.items).toEqual(items);
+  });
+
   test("falls back to the default page size when pageSize is not positive", () => {
     const result = paginateCandidates(items, 1, 0);
 

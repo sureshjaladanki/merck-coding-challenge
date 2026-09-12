@@ -1,4 +1,8 @@
-import { getCandidateById, getCandidates } from "../../src/lib/get-candidates";
+import {
+  getCandidateById,
+  getCandidateIds,
+  getCandidates,
+} from "../../src/lib/get-candidates";
 
 describe("getCandidates", () => {
   test("returns summaries without detail-only fields", () => {
@@ -35,5 +39,20 @@ describe("getCandidateById", () => {
     expect(candidate?.sideEffects.length).toBeGreaterThan(0);
     expect(candidate?.therapeuticArea.length).toBeGreaterThan(0);
     expect(candidate?.developmentPhase.length).toBeGreaterThan(0);
+  });
+
+  test("returns a new sideEffects array on each read", () => {
+    const [summary] = getCandidates();
+    const firstRead = getCandidateById(summary.id);
+    const secondRead = getCandidateById(summary.id);
+
+    expect(firstRead?.sideEffects).not.toBe(secondRead?.sideEffects);
+    expect(firstRead?.sideEffects).toEqual(secondRead?.sideEffects);
+  });
+});
+
+describe("getCandidateIds", () => {
+  test("returns ids in catalog order", () => {
+    expect(getCandidateIds()).toEqual(getCandidates().map((candidate) => candidate.id));
   });
 });

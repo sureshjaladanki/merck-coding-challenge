@@ -17,9 +17,9 @@ Tracking document for the Merck KGaA senior frontend coding challenge ([coding-c
 | ID | Milestone | Status | Exit criteria |
 | --- | --- | --- | --- |
 | M0 | Scaffold and standards | Done | Next.js App Router, TypeScript strict, Tailwind, npm, Node pin, docs/standards present |
-| M1 | Domain, mock data, accessors | Done | Typed models, JSON catalog, `getCandidates` / `getCandidateById`, filter / paginate / format helpers |
+| M1 | Domain, mock data, accessors | Done | Typed models, JSON catalog, `getCandidates` / `getCandidateById`, parse / filter / paginate / format helpers |
 | M2 | List, search, details UI | Done | Homepage list + name search, details route, 404, Tailwind layout; UI does not import JSON |
-| M3 | Jest unit tests | Done | `npm test` green; domain tests + SearchBar behavior test |
+| M3 | Jest unit tests | Done | `npm test` green; domain, component, and route tests; `src` coverage collected |
 | M4 | Documentation and walkthrough verification | Done | README accurate; lint, tsc, browser flows pass |
 
 ## M0 — Scaffold and standards
@@ -40,7 +40,8 @@ Architecture: list vs detail shapes; I/O only in accessors; O(1) id lookup; UI n
 
 - [x] `src/types/drug-candidate.ts` — `DrugStatus`, `DrugCandidateSummary`, `DrugCandidate`
 - [x] `data/candidates.json` — ~8–12 records, mixed statuses, detail-only fields
-- [x] `src/lib/get-candidates.ts` — `getCandidates()`, `getCandidateById()`, id map
+- [x] `src/lib/get-candidates.ts` — `getCandidates()`, `getCandidateById()`, `getCandidateIds()`, id map
+- [x] `src/lib/parse-candidates.ts` — catalog validation for the JSON payload
 - [x] `src/lib/filter-candidates.ts` — case-insensitive name filter; empty query copies the list
 - [x] `src/lib/paginate-candidates.ts` — `DEFAULT_PAGE_SIZE` + page slice
 - [x] `src/lib/format-status.ts` — display labels
@@ -73,9 +74,19 @@ Architecture: list vs detail shapes; I/O only in accessors; O(1) id lookup; UI n
 - [x] `__tests__/lib/paginate-candidates.test.ts`
 - [x] `__tests__/lib/format-status.test.ts`
 - [x] `__tests__/lib/get-candidates.test.ts`
+- [x] `__tests__/lib/parse-candidates.test.ts`
 - [x] `__tests__/components/search-bar.test.tsx`
+- [x] `__tests__/components/status-badge.test.tsx`
+- [x] `__tests__/components/candidate-list-item.test.tsx`
+- [x] `__tests__/components/candidate-list.test.tsx`
+- [x] `__tests__/components/candidate-explorer.test.tsx`
+- [x] `__tests__/app/page.test.tsx`
+- [x] `__tests__/app/layout.test.tsx`
+- [x] `__tests__/app/not-found.test.tsx`
+- [x] `__tests__/app/candidates-page.test.tsx`
+- [x] `collectCoverageFrom` for `src/**/*.{ts,tsx}` (excluding types)
 
-**Exit:** `npm test` passes. Domain tests first; component tests cover behavior, not class strings.
+**Exit:** `npm test` passes. Domain tests first; component and route tests cover user-visible behavior, not class strings.
 
 ## M4 — Documentation and walkthrough verification
 
